@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Heart Animation </title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Google Fonts for premium typography -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="ui-overlay">
+        <h1 class="main-title">Heart Animation <br>to my best friend 😍</h1>
+    </div>
+
+    <!-- Hidden SVG to sample the heart path -->
+    <svg width="600" height="600" style="display: none;">
+        <path id="heart-path"
+            d="M300,500 C200,400 100,300 100,180 C100,100 180,100 220,140 C240,160 260,200 300,200 C340,200 360,160 380,140 C420,100 500,100 500,180 C500,300 400,400 300,500 Z">
+        </path>
+    </svg>
+
+    <canvas id="canvas"></canvas>
+
+    <div class="signature">D.i.d.a.h💐</div>
+
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
