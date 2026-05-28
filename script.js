@@ -42,19 +42,19 @@ const tl = gsap.timeline();
 for (let i = 0; i < length; i += 0.1) {
     const idx = Math.floor(i / 0.1);
     const point = path.getPointAtLength(i);
-    
+
     // Centering the heart (approximate based on path d="M300,500...")
     // SVG coords: 0-600. Center is 300,300.
     // Three.js world coords: subtract 300 to center it.
     const vector = new THREE.Vector3(point.x - 300, -(point.y - 300), 0);
-    
+
     // Add jitter as shown in the screenshot
     vector.x += (Math.random() - 0.5) * 30;
     vector.y += (Math.random() - 0.5) * 30;
     vector.z += (Math.random() - 0.5) * 70;
-    
+
     vertices.push(vector);
-    
+
     // GSAP Animation as shown in the screenshot
     tl.from(vector, {
         x: 0, // 600/2 - 300 (centered)
@@ -68,7 +68,7 @@ for (let i = 0; i < length; i += 0.1) {
 // --- Animation Loop ---
 function animate() {
     requestAnimationFrame(animate);
-    
+
     // Update geometry positions from animated vectors
     const posAttr = geometry.attributes.position;
     for (let i = 0; i < vertices.length; i++) {
